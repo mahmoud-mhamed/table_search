@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>select search</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" id="input" placeholder="enter text to search">
+    <table id="table" border="2" >
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>mahmoud</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ahmed</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>mostafa</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ali</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>5</td>
+                <td>khaled</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>ali</td>
+                <td>20</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+<script  src="select_table.js"></script>
+<script>
+
+$('#input').keyup(function () {
+    table_search($('#input').val(),$('#table tbody tr,#table tfoot tr'),'012');
+});
+
+
+</script>
+</html>
