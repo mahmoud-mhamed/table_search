@@ -9,7 +9,7 @@ function table_search(search,tr,indexSearch='0') {
         var resule='false';
         for (var j = 0; j < indexSearch.length ; j++) {
             if (tr.eq(i).children().length > indexSearch[j]) {
-                if (tr.eq(i).children().eq(indexSearch[j]).html().indexOf(search)!=-1){
+                if (tr.eq(i).children().eq(indexSearch[j]).text().indexOf(search)!=-1){
                     resule='success';
                     break;
                 }
